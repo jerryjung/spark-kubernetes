@@ -1,7 +1,7 @@
 FROM java:openjdk-8-jdk
 
 ENV hadoop_ver 2.7.3
-ENV spark_ver 2.0.1
+ENV spark_ver 2.0.2
 
 # Get Hadoop from US Apache mirror and extract just the native
 # libs. (Until we care about running HDFS with these containers, this
@@ -30,4 +30,5 @@ RUN apt-get update && \
 
 ADD common.sh spark-master spark-worker /
 ADD spark-defaults.conf /opt/spark/conf/spark-defaults.conf
+ADD metatron-metis-1.0.0-Spark-2.0.2-SNAPSHOT.jar /opt/hadoop/lib/native/metatron-metis-1.0.0-Spark-2.0.2-SNAPSHOT.jar
 ENV PATH $PATH:/opt/spark/bin
