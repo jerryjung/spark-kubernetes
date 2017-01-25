@@ -29,9 +29,11 @@ apiVersion: v1
 metadata:
   name: jupyter-notebook
 spec:
+  type: NodePort
   ports:
     - port: 8888
       targetPort: 8888
+      nodePort: 30088
   selector:
     component: jupyter-notebook
 
