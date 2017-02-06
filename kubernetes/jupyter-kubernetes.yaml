@@ -13,7 +13,7 @@ spec:
         component: jupyter-notebook
     spec:
       containers:
-        - name: spark-master
+        - name: spark-jupyter
           image: jerryjung/pyspark-notebook:latest
           command: ["start-notebook.sh"]
           ports:
