@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: jupyter
-          image: jerryjung/base-notebook:latest
+          image: jerryjung/jupyter-notebook:latest
           command: ["start-notebook.sh"]
           ports:
             - containerPort: 8888
