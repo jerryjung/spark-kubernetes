@@ -9,7 +9,7 @@
                 "name": "zookeeper-1",
                 "labels": {
                     "name": "zookeeper-1",
-		    "service" : "seldon"
+		    "service" : "zookeeper"
                 }
             },
             "spec": {
@@ -50,7 +50,7 @@
                 "name": "zookeeper-2",
                 "labels": {
                     "name": "zookeeper-2",
-		    "service" : "seldon"
+		    "service" : "zookeeper"
                 }
             },
             "spec": {
@@ -91,7 +91,7 @@
                 "name": "zookeeper-3",
                 "labels": {
                     "name": "zookeeper-3",
-		    "service" : "seldon"
+		    "service" : "zookeeper"
                 }
             },
             "spec": {
@@ -134,7 +134,7 @@
                 "labels": {
                     "name": "zookeeper",
                     "server-id": "1",
-		    "service" : "seldon"
+		    "service" : "zookeeper"
                 }
             },
             "spec": {
@@ -187,7 +187,7 @@
                 "labels": {
                     "name": "zookeeper",
                     "server-id": "2",
-		    "service" : "seldon"
+		    "service" : "zookeeper"
                 }
             },
             "spec": {
@@ -240,7 +240,7 @@
                 "labels": {
                     "name": "zookeeper",
                     "server-id": "3",
-		    "service": "seldon"
+		    "service": "zookeeper"
                 }
             },
             "spec": {
