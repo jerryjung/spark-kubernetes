@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER jerryjung <jerryjung@sk.com>
+LABEL maintainer jerryjung@sk.com
 
 ENV ZOOKEEPER_VERSION 3.4.8
 

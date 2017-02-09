@@ -1,6 +1,6 @@
 FROM anapsix/alpine-java
 
-MAINTAINER jerryjung <jerryjung@sk.com>
+LABEL maintainer jerryjung@sk.com
 
 #Derived from https://github.com/wurstmeister/kafka-docker
 

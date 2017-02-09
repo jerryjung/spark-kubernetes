@@ -1,5 +1,7 @@
 FROM java:openjdk-8-jdk
 
+LABEL maintainer jerryjung@sk.com
+
 ENV hadoop_ver 2.7.3
 ENV spark_ver 2.0.2
 
