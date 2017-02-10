@@ -1,0 +1,37 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: jupyter-notebook
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: jupyter-notebook
+  template:
+    metadata:
+      labels:
+        component: jupyter-notebook
+    spec:
+      containers:
+        - name: spark-jupyter
+          image: jerryjung/jupyter-notebook:latest
+          command: ["start-notebook.sh"]
+          ports:
+            - containerPort: 8888
+          resources:
+            requests:
+              cpu: 100m
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: jupyter-notebook
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8888
+      targetPort: 8888
+  selector:
+    component: jupyter-notebook
