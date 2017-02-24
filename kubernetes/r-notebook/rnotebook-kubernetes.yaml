@@ -1,0 +1,37 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: r-notebook-aws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: r-notebook-aws
+  template:
+    metadata:
+      labels:
+        component: r-notebook-aws
+    spec:
+      containers:
+        - name: jupyter-aws
+          image: jerryjung/jupyter-rnotebook:latest
+          command: ["start-notebook.sh"]
+          ports:
+            - containerPort: 8888
+          resources:
+            requests:
+              cpu: 400m
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: r-notebook-aws
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8888
+      targetPort: 8888
+  selector:
+    component: r-notebook-aws
